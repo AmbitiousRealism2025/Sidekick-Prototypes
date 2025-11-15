@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brutalist Minimalism - NO custom styles, all Tailwind */
+/* Static confidence - NO animations except color transitions */
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply font-sans text-base text-black bg-white;
+  }
+}
+
+@layer utilities {
+  /* Reduced motion preference - already minimal */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
